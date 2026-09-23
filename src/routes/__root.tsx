@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Coxinha da Vila — Salgados Caseiros em Fortaleza" },
+      { title: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
       {
         name: "description",
         content:
           "Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia e entregues quentinhos em caixas para festas e eventos em Fortaleza-CE.",
       },
-      { property: "og:title", content: "Coxinha da Vila — Salgados Caseiros em Fortaleza" },
+      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
       {
         property: "og:description",
         content:

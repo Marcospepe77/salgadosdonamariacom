@@ -4,17 +4,18 @@ import coxinhaImg from "@/assets/coxinha.jpg";
 import bolinhaImg from "@/assets/bolinha.jpg";
 import pastelImg from "@/assets/pastel.jpg";
 import quibeImg from "@/assets/quibe.jpg";
+import { ComboAI } from "@/components/ComboAI";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Coxinha da Vila — Salgados Caseiros em Fortaleza" },
+      { title: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
       {
         name: "description",
         content:
           "Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia e entregues quentinhos em caixas para festas e eventos em Fortaleza-CE. Encomende pelo WhatsApp.",
       },
-      { property: "og:title", content: "Coxinha da Vila — Salgados Caseiros em Fortaleza" },
+      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
       {
         property: "og:description",
         content:
@@ -29,7 +30,7 @@ const menu = [
   {
     name: "Coxinha de Frango",
     desc: "Massa aerada, recheio desfiado no tempero da casa.",
-    price: "R$ 4,50",
+    price: "R$ 1,00",
     img: coxinhaImg,
   },
   {
@@ -41,7 +42,7 @@ const menu = [
   {
     name: "Pastel de Carne",
     desc: "Recheio de carne e cebola, massa fina e dourada.",
-    price: "R$ 6,00",
+    price: "R$ 3,00",
     img: pastelImg,
   },
   {
@@ -79,10 +80,10 @@ function Index() {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <a href="/" className="flex items-center gap-3">
           <span className="grid size-10 place-items-center rounded-xl bg-brand font-display text-lg font-semibold text-cream">
-            C
+            M
           </span>
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold">Coxinha da Vila</p>
+            <p className="font-display text-lg font-semibold">Salgados Dona Maria</p>
             <p className="text-[11px] uppercase tracking-[0.2em] text-ink/50">
               Salgados caseiros · Fortaleza
             </p>
@@ -192,7 +193,7 @@ function Index() {
               <div className="p-3">
                 <h3 className="font-display text-xl font-semibold">{item.name}</h3>
                 <p className="mt-1 text-sm text-ink/60">{item.desc}</p>
-                <p className="mt-3 font-semibold text-brand">a partir de {item.price}</p>
+                <p className="mt-3 font-semibold text-brand">{item.price} <span className="text-xs font-normal text-ink/50">/ unidade</span></p>
               </div>
             </div>
           ))}
@@ -248,14 +249,16 @@ function Index() {
         </div>
       </section>
 
+      <ComboAI />
+
       <footer
         id="contato"
         className="mx-auto max-w-6xl scroll-mt-20 px-6 pb-10 sm:flex sm:items-center sm:justify-between"
       >
-        <p className="text-sm text-ink/60">© 2026 Coxinha da Vila · Fortaleza-CE</p>
+        <p className="text-sm text-ink/60">© 2026 Salgados Dona Maria · Fortaleza-CE</p>
         <div className="mt-4 flex flex-col gap-1 text-sm text-ink/60 sm:mt-0 sm:flex-row sm:items-center sm:gap-6">
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5598970150776"
             className="transition-colors hover:text-brand"
           >
             WhatsApp
