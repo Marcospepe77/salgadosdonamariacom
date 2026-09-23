@@ -1,25 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroSalgados from "@/assets/hero-salgados.jpg";
 import coxinhaImg from "@/assets/coxinha.jpg";
-import bolinhaImg from "@/assets/bolinha.jpg";
 import pastelImg from "@/assets/pastel.jpg";
-import quibeImg from "@/assets/quibe.jpg";
 import { ComboAI } from "@/components/ComboAI";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
+      { title: "Salgados Dona Maria — Salgados Caseiros no Maranhão" },
       {
         name: "description",
         content:
-          "Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia e entregues quentinhos em caixas para festas e eventos em Fortaleza-CE. Encomende pelo WhatsApp.",
+          "Coxinhas de frango, carne e queijo e pastéis de carne e queijo feitos no dia e entregues quentinhos em caixas para festas e eventos no Maranhão. Encomende pelo WhatsApp.",
       },
-      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
+      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros no Maranhão" },
       {
         property: "og:description",
         content:
-          "Salgados caseiros fritos na hora, em caixas prontas para encomendas, festas e eventos em toda Fortaleza.",
+          "Salgados caseiros fritos na hora, em caixas prontas para encomendas, festas e eventos em todo o Maranhão.",
       },
     ],
   }),
@@ -34,10 +32,16 @@ const menu = [
     img: coxinhaImg,
   },
   {
-    name: "Bolinha de Queijo",
-    desc: "Casquinha crocante, queijo que puxa fio no meio.",
-    price: "R$ 4,00",
-    img: bolinhaImg,
+    name: "Coxinha de Carne",
+    desc: "Carne moída temperada, massa macia e crocante por fora.",
+    price: "R$ 1,00",
+    img: coxinhaImg,
+  },
+  {
+    name: "Coxinha de Queijo",
+    desc: "Recheio de queijo derretido que puxa fio.",
+    price: "R$ 1,00",
+    img: coxinhaImg,
   },
   {
     name: "Pastel de Carne",
@@ -46,10 +50,10 @@ const menu = [
     img: pastelImg,
   },
   {
-    name: "Quibe de Carne",
-    desc: "Massa de trigo, recheio de carne, crocante por fora.",
-    price: "R$ 5,50",
-    img: quibeImg,
+    name: "Pastel de Queijo",
+    desc: "Queijo cremoso na massa fininha, fritinho na hora.",
+    price: "R$ 3,00",
+    img: pastelImg,
   },
 ];
 
