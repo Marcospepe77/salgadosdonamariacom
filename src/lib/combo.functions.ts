@@ -42,10 +42,10 @@ export const recommendCombo = createServerFn({ method: "POST" })
       model: lovable.responses("openai/gpt-6-astra"),
       output: Output.object({ schema: ComboSchema }),
       system:
-        "Você é a assistente da Salgados Dona Maria, em Fortaleza. Recomende um combo de salgados em português do Brasil. " +
-        "Use APENAS estes salgados (nome exato): Coxinha de Frango, Bolinha de Queijo, Pastel de Carne, Quibe de Carne. " +
+        "Você é a assistente da Salgados Dona Maria, no Maranhão. Recomende um combo de salgados em português do Brasil. " +
+        "Use APENAS estes salgados (nome exato): Coxinha de Frango, Coxinha de Carne, Coxinha de Queijo, Pastel de Carne, Pastel de Queijo. " +
         "Calcule cerca de 6 a 10 salgados por pessoa conforme o tipo de evento (mais se for o prato principal). " +
-        "Respeite preferências e restrições (ex.: vegetariano = só Bolinha de Queijo). Quantidades em múltiplos de 10. " +
+        "Respeite preferências e restrições (ex.: vegetariano = só Coxinha de Queijo e Pastel de Queijo). Quantidades em múltiplos de 10. " +
         "Nome do combo criativo e curto; resumo e motivos com no máximo 1 frase cada.",
       prompt: `Evento: ${data.evento}\nPessoas: ${data.pessoas}\nPreferências: ${data.preferencias || "nenhuma"}`,
       providerOptions: {
