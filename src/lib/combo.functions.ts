@@ -18,9 +18,10 @@ const ComboSchema = z.object({
 
 const PRICES: Record<string, number> = {
   "Coxinha de Frango": 1,
-  "Bolinha de Queijo": 4,
+  "Coxinha de Carne": 1,
+  "Coxinha de Queijo": 1,
   "Pastel de Carne": 3,
-  "Quibe de Carne": 5.5,
+  "Pastel de Queijo": 3,
 };
 
 export type Combo = z.infer<typeof ComboSchema> & { total: number; totalUnidades: number };
