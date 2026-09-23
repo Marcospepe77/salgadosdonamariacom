@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
+      { title: "Salgados Dona Maria — Salgados Caseiros no Maranhão" },
       {
         name: "description",
         content:
-          "Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia e entregues quentinhos em caixas para festas e eventos em Fortaleza-CE.",
+          "Coxinhas de frango, carne e queijo e pastéis de carne e queijo feitos no dia e entregues quentinhos em caixas para festas e eventos no Maranhão.",
       },
-      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros em Fortaleza" },
+      { property: "og:title", content: "Salgados Dona Maria — Salgados Caseiros no Maranhão" },
       {
         property: "og:description",
         content:
-          "Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia e entregues quentinhos em caixas para festas e eventos em Fortaleza-CE.",
+          "Coxinhas de frango, carne e queijo e pastéis de carne e queijo feitos no dia e entregues quentinhos em caixas para festas e eventos no Maranhão.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

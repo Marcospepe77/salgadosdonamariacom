@@ -89,7 +89,7 @@ function Index() {
           <div className="leading-tight">
             <p className="font-display text-lg font-semibold">Salgados Dona Maria</p>
             <p className="text-[11px] uppercase tracking-[0.2em] text-ink/50">
-              Salgados caseiros · Fortaleza
+              Salgados caseiros · Maranhão
             </p>
           </div>
         </a>
@@ -121,8 +121,8 @@ function Index() {
             Salgados caseiros que chegam quentinhos na sua festa.
           </h1>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-ink/70">
-            Coxinhas, bolinhas de queijo, pastéis e quibes feitos no dia, em caixas prontas para
-            encomendas, festas e eventos em toda Fortaleza.
+            Coxinhas de frango, carne e queijo e pastéis de carne e queijo feitos no dia, em caixas
+            prontas para encomendas, festas e eventos em todo o Maranhão.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -183,7 +183,7 @@ function Index() {
             Cardápio completo →
           </a>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {menu.map((item) => (
             <div key={item.name} className="rounded-2xl bg-cream p-3 shadow-lg shadow-ink/5">
               <img
@@ -215,7 +215,7 @@ function Index() {
             </h2>
             <p className="mt-4 max-w-md leading-relaxed text-cream/70">
               Escolha o tamanho da caixa, o mix de salgados e a data. A gente frita na hora e
-              entrega quentinho em Fortaleza.
+              entrega quentinho no Maranhão.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {["50 un.", "100 un.", "250 un.", "500+ un."].map((size) => (
@@ -259,7 +259,7 @@ function Index() {
         id="contato"
         className="mx-auto max-w-6xl scroll-mt-20 px-6 pb-10 sm:flex sm:items-center sm:justify-between"
       >
-        <p className="text-sm text-ink/60">© 2026 Salgados Dona Maria · Fortaleza-CE</p>
+        <p className="text-sm text-ink/60">© 2026 Salgados Dona Maria · Maranhão</p>
         <div className="mt-4 flex flex-col gap-1 text-sm text-ink/60 sm:mt-0 sm:flex-row sm:items-center sm:gap-6">
           <a
             href="https://wa.me/5598970150776"
