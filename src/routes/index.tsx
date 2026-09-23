@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroSalgados from "@/assets/hero-salgados.jpg";
 import coxinhaFrangoImg from "@/assets/coxinha-frango.jpg";
@@ -76,6 +77,7 @@ const steps = [
 ];
 
 function Index() {
+  const [pixCopied, setPixCopied] = useState(false);
   return (
     <div
       className="min-h-screen w-full text-ink antialiased"
@@ -260,19 +262,78 @@ function Index() {
 
       <footer
         id="contato"
-        className="mx-auto max-w-6xl scroll-mt-20 px-6 pb-10 sm:flex sm:items-center sm:justify-between"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 pb-12"
       >
-        <p className="text-sm text-ink/60">© 2026 Salgados Dona Maria · Maranhão</p>
-        <div className="mt-4 flex flex-col gap-1 text-sm text-ink/60 sm:mt-0 sm:flex-row sm:items-center sm:gap-6">
-          <a
-            href="https://wa.me/5598970150776"
-            className="transition-colors hover:text-brand"
-          >
-            WhatsApp
-          </a>
-          <a href="#" className="transition-colors hover:text-brand">
-            Instagram
-          </a>
+        <div className="rounded-[2rem] bg-cream p-8 shadow-lg shadow-ink/5 md:p-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">
+                Fale com a gente
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight">
+                Contato e pagamento
+              </h2>
+            </div>
+            <p className="text-sm text-ink/50">Encomendas com 48h de antecedência</p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <a
+              href="https://wa.me/5598970150776"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl border border-ink/10 bg-parchment/60 p-5 transition-colors hover:border-brand/40"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
+                WhatsApp
+              </p>
+              <p className="mt-2 font-semibold text-ink group-hover:text-brand">(98) 7015-0776</p>
+              <p className="mt-1 text-xs text-ink/50">Pedidos e encomendas</p>
+            </a>
+            <a
+              href="https://www.instagram.com/marcosyhx7"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl border border-ink/10 bg-parchment/60 p-5 transition-colors hover:border-brand/40"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
+                Instagram
+              </p>
+              <p className="mt-2 font-semibold text-ink group-hover:text-brand">@marcosyhx7</p>
+              <p className="mt-1 text-xs text-ink/50">Fotos e novidades</p>
+            </a>
+            <a
+              href="mailto:salgadosdonamaria@gmail.com"
+              className="group rounded-2xl border border-ink/10 bg-parchment/60 p-5 transition-colors hover:border-brand/40"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
+                E-mail
+              </p>
+              <p className="mt-2 break-all font-semibold text-ink group-hover:text-brand">
+                salgadosdonamaria@gmail.com
+              </p>
+              <p className="mt-1 text-xs text-ink/50">Contato e orçamentos</p>
+            </a>
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard?.writeText("salgadosdonamaria@gmail.com");
+                setPixCopied(true);
+                window.setTimeout(() => setPixCopied(false), 2000);
+              }}
+              className="group rounded-2xl border border-ink/10 bg-parchment/60 p-5 text-left transition-colors hover:border-brand/40"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
+                Chave Pix
+              </p>
+              <p className="mt-2 break-all font-semibold text-ink group-hover:text-brand">
+                salgadosdonamaria@gmail.com
+              </p>
+              <p className="mt-1 text-xs font-medium text-brand">
+                {pixCopied ? "Copiado! ✓" : "Toque para copiar"}
+              </p>
+            </button>
+          </div>
+          <p className="mt-8 text-sm text-ink/60">© 2026 Salgados Dona Maria · Maranhão</p>
         </div>
       </footer>
     </div>
