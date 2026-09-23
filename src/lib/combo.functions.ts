@@ -67,7 +67,7 @@ export const recommendCombo = createServerFn({ method: "POST" })
       throw new Error("Não foi possível gerar o combo. Tente novamente.");
     }
     const itens = output.itens.filter((i) => i.salgado in PRICES && i.quantidade > 0);
-    const total = itens.reduce((s, i) => s + PRICES[i.salgado] * i.quantidade, 0);
+    const total = itens.reduce((s, i) => s + (PRICES[i.salgado] ?? 0) * i.quantidade, 0);
     const totalUnidades = itens.reduce((s, i) => s + i.quantidade, 0);
     return { ...output, itens, total, totalUnidades };
   });
