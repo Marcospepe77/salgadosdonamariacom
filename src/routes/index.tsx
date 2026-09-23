@@ -4,6 +4,7 @@ import coxinhaImg from "@/assets/coxinha.jpg";
 import bolinhaImg from "@/assets/bolinha.jpg";
 import pastelImg from "@/assets/pastel.jpg";
 import quibeImg from "@/assets/quibe.jpg";
+import { ComboAI } from "@/components/ComboAI";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -247,6 +248,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <ComboAI />
 
       <footer
         id="contato"
