@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroSalgados from "@/assets/hero-salgados.jpg";
 import coxinhaFrangoImg from "@/assets/coxinha-frango.jpg";
@@ -76,6 +77,7 @@ const steps = [
 ];
 
 function Index() {
+  const [pixCopied, setPixCopied] = useState(false);
   return (
     <div
       className="min-h-screen w-full text-ink antialiased"
