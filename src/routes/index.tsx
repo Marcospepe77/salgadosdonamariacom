@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroSalgados from "@/assets/hero-salgados.jpg";
-import coxinhaImg from "@/assets/coxinha.jpg";
-import pastelImg from "@/assets/pastel.jpg";
+import coxinhaFrangoImg from "@/assets/coxinha-frango.jpg";
+import coxinhaCarneImg from "@/assets/coxinha-carne.jpg";
+import coxinhaQueijoImg from "@/assets/coxinha-queijo.jpg";
+import pastelCarneImg from "@/assets/pastel-carne.jpg";
+import pastelQueijoImg from "@/assets/pastel-queijo.jpg";
 import { ComboAI } from "@/components/ComboAI";
 
 export const Route = createFileRoute("/")({
@@ -29,31 +32,31 @@ const menu = [
     name: "Coxinha de Frango",
     desc: "Massa aerada, recheio desfiado no tempero da casa.",
     price: "R$ 1,00",
-    img: coxinhaImg,
+    img: coxinhaFrangoImg,
   },
   {
     name: "Coxinha de Carne",
     desc: "Carne moída temperada, massa macia e crocante por fora.",
     price: "R$ 1,00",
-    img: coxinhaImg,
+    img: coxinhaCarneImg,
   },
   {
     name: "Coxinha de Queijo",
     desc: "Recheio de queijo derretido que puxa fio.",
     price: "R$ 1,00",
-    img: coxinhaImg,
+    img: coxinhaQueijoImg,
   },
   {
     name: "Pastel de Carne",
     desc: "Recheio de carne e cebola, massa fina e dourada.",
     price: "R$ 3,00",
-    img: pastelImg,
+    img: pastelCarneImg,
   },
   {
     name: "Pastel de Queijo",
     desc: "Queijo cremoso na massa fininha, fritinho na hora.",
     price: "R$ 3,00",
-    img: pastelImg,
+    img: pastelQueijoImg,
   },
 ];
 
